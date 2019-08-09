@@ -1,0 +1,151 @@
+.player {
+  width: 100%;
+  height: 100%;
+  .songlist-title {
+    height: 100px;
+    width: 100%;
+    a {
+      display: block;
+      width: 100px;
+      height: 40px;
+      position: absolute;
+      left: 24%;
+      top: 35px;
+      text-align: center;
+      line-height: 40px;
+      font-size: 20px;
+      color: rgb(199, 194, 194);
+      &:hover {
+        color: #31C27C;
+      }
+    }
+  }
+  .inner {    
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+    position: relative;
+    .play-body {
+      overflow: hidden;
+    }
+    
+
+    .control {
+      width: 100%;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      height: 90px;
+      background-color: rgba(0, 0, 0, .1);
+      .play-pause {
+        position: relative;
+        width: 200px;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 30px;
+        // display: flex;
+        & a:first-child {
+            position: absolute;
+            left: 10px;
+            top: 14px;
+            width: 20px;
+            height: 20px;
+          i {
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: url('../../assets/player.png') 0 -30px no-repeat;
+            opacity: .6;
+          }
+
+          &:hover i {
+            opacity: 1;
+          }
+        }
+        & a:nth-child(2) {
+          position: absolute;
+          left: 50px;
+          top: 8px;
+          width: 21px;
+          height: 29px;
+          
+        i {
+          display: block;
+          width: 100%;
+          height: 100%;
+          background: url('../../assets/player.png') 0 0 no-repeat;
+          opacity: .6;
+        }
+
+        &:hover i {
+          opacity: 1;
+        }
+        .play {
+          background-position: -30px 0;
+        }
+      }
+
+      & a:nth-child(3) {
+        position: absolute;
+        left: 90px;
+        top: 12px;
+        width: 21px;
+        height: 21px;
+      i {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: url('../../assets/player.png') 0 -50px no-repeat;
+        opacity: .6;
+      }
+
+      &:hover i {
+        opacity: 1;
+      }
+    }
+      }
+      .progress {
+        
+        margin: 10px auto;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 50px;
+        display: flex;
+        justify-content: space-around;
+        line-height: 50px;
+        padding-left: 20px;
+        .length {
+          margin-left: 10px;
+          height: 4px;
+          border-radius: 4px;
+          background-color: #ccc;
+          width: 500px;
+          margin-top: 24px;
+          margin-right: 10px;
+          position: relative;
+          .cur-length {
+            height: 4px;
+            width: 0px;
+            background-color:rgb(127,78,102);
+          }
+          i {
+            height: 4px;
+            width: 4px;
+            border-radius: 4px;
+            background-color: rgb(127,78,102);
+            position: absolute;
+            left: 0;
+            top: 0;
+          }
+        }
+        span {
+          color: rgb(199, 194, 194);
+        }
+      }
+    }
+  }
+  
+}

@@ -1,0 +1,97 @@
+$color: #31C27C;
+$border: 1px solid #ccc;
+
+.home {
+  padding-top: 40px;
+  .hot {
+    height: 600px;
+    background: url('../../assets/bg_detail.jpg') 50% 0 repeat-x;
+    .hot_inner {
+      width: 1200px;
+      margin: 0 auto;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+      .index_hd { //标题的样式
+        padding-top: 4.1666%;
+        padding-bottom: 2%;
+        h2 {
+          background-position: 0 0;
+          width: 196px;
+          height: 40px;
+          margin: 0 auto;
+          background-image: url('../../assets/index_tit.png');
+          i {
+            font: 0/0 a;  
+          }
+        }
+      }
+
+      .mod_index_tab {
+        height: 50px;
+        text-align: center;
+        a {
+          margin: 0 24px;
+          display: inline-block;
+        }
+      }
+
+      
+      .lunbo {
+        /deep/ .el-carousel__container {
+          height: 320px;
+        }
+        .el-carousel__arrow {
+          overflow-x: none;
+        }
+        /deep/ .el-carousel__arrow {
+          border-radius: 0;
+          height: 100px;
+          background-color: rgba(0, 0, 0, .4);
+          font-size: 20px;
+        }
+        /deep/ .el-carousel__arrow--left {
+          left: 0;
+          top: 115px;
+        }
+        /deep/ .el-carousel__arrow--right {
+          right: 0;
+          top: 115px;
+        }
+      
+        /deep/ .el-carousel__button {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: #ccc;
+        }
+        .item {
+          display: flex;
+          justify-content: space-between;
+          li {
+            width: 225px;
+            .cover {
+              a {
+                display: block;
+                img {
+                  width: 100%;
+                }
+              }
+            }
+            .intro {
+              font-size: 14px;
+              p {
+                color: #ccc;
+                margin-top: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .current {
+    color: $color
+  }
+}

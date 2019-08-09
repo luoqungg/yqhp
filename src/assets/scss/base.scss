@@ -1,0 +1,215 @@
+$color: #31C27C;
+$border: 1px solid #ccc;
+
+blockquote,body,button,dd,dl,dt,fieldset, form, h1, h2, h3, h4, h5, h6, hr, html, input, lengend, li, ol, p, pre, td, textarea, th, ul {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+
+input, textarea {
+  outline: none;
+  border: none;
+  resize: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #31C27C;
+}
+
+.fl {
+  float: left;
+}
+.fr {
+  float: right
+}
+
+.clearFix::after {
+  content: '';
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+
+.el-dialog--center .el-dialog__body {
+  .name, .password {
+    width: 80%;
+    margin: 0px auto;
+    &.name {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.main {
+  margin: 10px auto;
+  width: 800px;
+  float: left;
+  height: 520px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  .first_line {
+    height: 50px;
+    display: flex;
+    line-height: 50px;
+    color: #999;
+    & li:first-child {
+      padding-left: 40px;
+      flex: 3;
+    }
+
+    & li:nth-child(2) {
+      flex: 1;
+    }
+    & li:nth-child(3) {
+      flex: 1;
+    }
+    & li:nth-child(4) {
+      flex: 1;
+      text-align: center;
+    }
+  }
+
+  .songlist {
+    font-size: 14px;
+    .showColor {
+      background-color: #c98;
+      
+    }
+    li {
+      position: relative;
+      display: flex;
+      height: 50px;
+      line-height: 50px;
+      cursor: pointer;
+      div {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .index {
+        width: 40px;
+        text-align: center;
+        color: #333
+      }
+      .title {
+        width: 380px;
+        a {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          display: inline-block;
+          width: 100%;
+          color: rgb(199, 194, 194);
+        }
+      }
+      .singer {
+        width: 126px;
+        a {
+          color: rgb(199, 194, 194);
+        }
+      }
+      .album {
+        width: 126px;
+        a {
+          color: rgb(199, 194, 194);
+        }
+      }
+      .time {
+        width: 126px;
+        text-align: center;
+        color: #333;
+      }
+      .hover {
+        opacity: 0;
+        position: absolute;
+        display: flex;
+        height: 36px;
+        width: 156px;
+        left: 260px;
+        top: 6px;
+        justify-content: space-between;
+        a {
+          // background-color: #ccc;
+          width: 36px;
+          i {
+            display: block;
+            height: 36px;
+            width: 36px;
+          }
+        }
+
+        & a:nth-child(1) {
+          i {
+            background: url("../icon_list_menu.png") 0 0 no-repeat;
+          }
+
+          &:hover i {
+            background-position: -40px 0;
+          }
+
+          .play {
+            background-position: 0 -200px;
+          }
+          .play:hover {
+            background-position: -40px -200px;
+          }
+        }
+        & a:nth-child(2) {
+          i {
+            background: url("../icon_list_menu.png") 0 -80px no-repeat;
+          }
+
+          &:hover i {
+            background-position: -40px -80px;
+          }
+        }
+        & a:nth-child(3) {
+          i {
+            background: url("../icon_list_menu.png") 0 -120px no-repeat;
+          }
+          &:hover i {
+            background-position: -40px -120px;
+          }
+        }
+        & a:nth-child(4) {
+          i {
+            background: url("../icon_list_menu.png") 0 -40px no-repeat;
+          }
+          &:hover i {
+            background-position: -40px -40px;
+          }
+        }
+      }
+      &:hover .title a {
+        width: 214px;
+      }
+      &:hover .hover {
+        opacity: 1;
+      }
+    }
+
+    
+  }
+}
+
+
+.main::-webkit-scrollbar {
+  width: 8px;
+}
+
+.main::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,.1);
+}
+
+
+

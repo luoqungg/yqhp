@@ -1,0 +1,79 @@
+.listdetail {
+  margin-top: 50px;
+  background-color: #F3F3F3;
+  .inner {
+    width: 1200px;
+    margin: 0px auto;
+    position: relative;
+    padding-top: 50px;
+    overflow: hidden;
+    .top {
+      display: flex;
+      .logo {
+        width: 250px;
+        height: 250px;
+        img {
+          width: 100%;
+        }
+      }
+      .introduce {
+        padding: 20px 0;
+        margin-left: 50px;
+        h2 {
+          font-weight: 400;
+          font-size: 24px;
+        }
+        p {
+          text-align: left;
+          margin-top: 20px;
+          .btn {
+            background-color: #31c27c;
+            &:hover {
+              background-color: rgb(9, 151, 85);
+            }
+          }
+          .icon_play {
+            display: inline-block;
+            width: 13px;
+            height: 16px;
+            background: url("../icon_sprite.png") -80px -220px no-repeat;
+            margin-right: 6px;
+            vertical-align: -3px; // 使icon和文字对其
+          }
+        }
+      }
+    }
+    .main {
+      .songlist {
+        li {
+          .title, .album, .singer {
+            a {
+              color: #333;
+            }
+          }
+          .index, .time {
+            color: #ccc;
+          }
+        }
+        & li:nth-child(2n+1) {
+          background-color: #FBFBFD;
+        }
+      }
+    }
+
+    .desc {
+      width: 360px;
+      float: right;
+      margin-top: 20px;
+      line-height: 1.2;
+      h2 {
+        font-weight: 400;
+      }
+      p {
+        height: 98px;
+        overflow: hidden;
+        margin-top: 10px;
+      }
+    }
+  }
+}
